@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let lgs = "javascript,.net,ecmascript,golang,java";
+        let r = lgs.split(',');
+        console.log('程序语言');
+        for(let n in r){
+            console.log(r[n]);
+        }
+        let i =0, j = 0, k = 0;
+        for(let n in r)
+        {
+            let s=r[n];
+            if(s.includes("a"))i++;
+            if(s.startsWith("j"))j++;
+            if(s.endsWith("t"))k++;
+        }
+        console.log('其中:');
+        console.log(`包含a：${i}门，j开头：${j}门，t结尾：${k}门`);
+    </script>
+</body>
+</html>

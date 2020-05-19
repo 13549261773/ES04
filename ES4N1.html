@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>  
+</head>
+<body>
+    <ul id="menu"></ul>
+    <style>
+    ul li {
+        list-style:circle;
+    }
+    </style>
+    <script>
+        let menus =[{ href:"#", title: "首页" },
+        { href: "#", title:"国内新闻"},
+        { href: "#", title:"国际新闻"},
+        { href: "https://www.runoob.com/", title:"友情链接"},
+        ];
+        let ms = menus.map(function (i) {
+            return `<li>
+            <a href=>${i.title}</a>
+            </li>`
+        }).join('');
+        document.getElementById("menu").innerHTML = ms;
+    </script>
+</body>
+</html>
